@@ -10,4 +10,9 @@ class Personaje extends Model
     use HasFactory;
     protected $primaryKey = 'id';
     protected $table = 'personajes';
+
+    public function serie(){
+        return $this->belongsTo(Serie::class, 'serie_id');
+    }
+
 }

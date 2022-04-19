@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'SeriesController@index');
 
 Route::resource('series', SeriesController::class);
+
+Route::get('personajes/{id}', 'PersonajesController@index');
+Route::get('eliminarPersonaje/{id}', 'PersonajesController@delete');

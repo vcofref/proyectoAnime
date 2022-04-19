@@ -10,4 +10,8 @@ class Serie extends Model
     use HasFactory;
     protected $primaryKey = 'id';
     protected $table = 'series';
+
+    public function personajes(){
+        return $this->hasMany(Personaje::class);
+    }
 }

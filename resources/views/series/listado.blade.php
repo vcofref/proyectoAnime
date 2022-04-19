@@ -17,9 +17,9 @@
                 </div>
                 <div class="card-footer">
                 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-danger">Eliminar</button>
-                    <button type="button" class="btn btn-warning">Ver</button>
-                    <button type="button" class="btn btn-success">Personajes</button>
+                    <a type="button" class="btn btn-danger">Eliminar</a>
+                    <a type="button" class="btn btn-warning">Ver</a>
+                    <a href="personajes/{{ $serie->id }}" type="button" class="btn btn-success">Personajes</a>
                 </div>
                 </div>
             </div>
