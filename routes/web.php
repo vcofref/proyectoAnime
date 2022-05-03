@@ -17,5 +17,13 @@ Route::get('/', 'SeriesController@index');
 
 Route::resource('series', SeriesController::class);
 
-Route::get('personajes/{id}', 'PersonajesController@index');
+Route::get('personajes/{id}', 'PersonajesController@index'); //Id Serie
 Route::get('eliminarPersonaje/{id}', 'PersonajesController@delete');
+Route::get('personaje/{id}','PersonajesController@show'); //Id Personaje
+Route::post('personaje', 'PersonajesController@update');
+
+Route::get('/buscar/{search?}', 'PersonajesController@search')->name('buscar');
+
+
+
+Route::get('/miniatura/{filename}', 'SeriesController@getImagen')->name('miniatura');

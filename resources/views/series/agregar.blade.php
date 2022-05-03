@@ -7,7 +7,7 @@
 @section('content')
 <hr>
 <div class="row">
-    <form action="{{ url('/series')}}" method="POST">
+    <form action="{{ url('/series')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Nombre</label>
@@ -15,7 +15,7 @@
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">imagen</label>
-            <input type="text" class="form-control" id="image" name="image">
+            <input type="file" class="form-control" id="image" name="image" accept=".png,.jpg,.jpeg">
         </div>
         <div class="mb-3">
             <label for="desc" class="form-label">Descripcion</label>
